@@ -9,9 +9,10 @@ RSpec.describe "As a user" do
         select "Fire Nation", :from => "nation"
         
         click_button "Search For Members"
-
+save_and_open_page
         expect(current_path).to eq(search_path)
 
+        expect(page).to have_content("Displaying 20 Nation Members:")  
         expect(page).to have_content("Name: Chan")  
         expect(page).to have_content("Allies: Ozai")  
         expect(page).to have_content("Enemies: Earth Kingdom")  
