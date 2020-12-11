@@ -3,6 +3,9 @@
 <h3>Displaying <%= @characters.count %>Results:</h3>
 
 <% @characters.each do |character| %>
-<%= require 'pry'; binding.pry %>
-  <p><%= character %></p>
+  <p><%= character[:name] %></p>
+  <p><img src="<%= character[:photoUrl] %>", alt="photo"></p>
+  <p><%= character[:allies] %></p>
+  <p><%= character[:enemies] %></p>
+  <p><%= character[:affiliation] %></p>
 <% end %>
