@@ -6,13 +6,16 @@ RSpec.describe "As a user" do
 
         visit root_path
 
-        select "Air Nomads", :from => "nation"
+        select "Fire Nation", :from => "nation"
         
         click_button "Search For Members"
-       
+
         expect(current_path).to eq(search_path)
 
-        expect(page).to have_content("Appa")  
+        expect(page).to have_content("Name: Chan")  
+        expect(page).to have_content("Allies: Ozai")  
+        expect(page).to have_content("Enemies: Earth Kingdom")  
+        expect(page).to have_content("Affiliation: Fire Nation Navy")  
     end
   end
 end
