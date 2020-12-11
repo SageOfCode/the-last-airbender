@@ -1,0 +1,8 @@
+<h1>Search Results</h1>
+
+<h3>Displaying <%= @characters.count %>Results:</h3>
+
+<% @characters.each do |character| %>
+<%= require 'pry'; binding.pry %>
+  <p><%= character %></p>
+<% end %>
