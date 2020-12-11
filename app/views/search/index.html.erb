@@ -1,11 +1,13 @@
 <h1>Search Results</h1>
 
-<h3>Displaying <%= @characters.count %>Results:</h3>
+<h3>Displaying <%= @characters.count %> Results:</h3>
+<br>
 
 <% @characters.each do |character| %>
-  <p><%= character.name %></p>
+  <h3>Name: <%= character.name %></h3>
   <p><img src="<%= character.photo %>", alt="photo"></p>
-  <p><%= character.allies %></p>
-  <p><%= character.enemies %></p>
-  <p><%= character.affiliation %></p>
+  <p>Allies: <%= character.allies %></p>
+  <p>Enemies: <%= character.enemies %></p>
+  <p>Affiliation: <%= character.affiliation %></p>
+  <br>
 <% end %>
